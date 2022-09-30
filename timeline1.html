@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title></title>
     <script>
+        var sumOverTen = (data) => {
+            return data >= 10 ? data : "0" + data
+        }
+        var cd = new Date();
+        var year = cd.getFullYear();
+        var month = sumOverTen(cd.getMonth() + 1)
+        var day = sumOverTen(cd.getDate())
+        var getDays = (year, month) => {
+            return new Date(year, month, 0).getDate()
+        }
         function getvalue(name) {
             const url_string = window.location.href;
             const url = new URL(url_string);
             return url.searchParams.get(name);
         }
         var myname = '刘醒';
-        var wanna = '09-30 07:00';
+        var wanna = month + "-" + day + " 10:16";
         var name1 = '刘文豪';
-        var passtime1 = '09-30 09:00';
+        var passtime1 = month + "-" + day + " 10:37";
         var bb1 = '同意';
     </script>
     <style>

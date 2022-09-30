@@ -37,8 +37,8 @@
         var getDays = (year, month) => {
             return new Date(year, month, 0).getDate()
         }
-
-        var nextDay = getDays(year, month) == day ? '01' : getDays(year, month) + 1
+        //var nextDay = getDays(year, month) == day ? '01' : getDays(year, month) + 1
+        var nextDay = getDays(year, month) == day ? '01' : sumOverTen(Number(day) + 1)
         var nextMonth = nextDay == "01" ? sumOverTen(Number(month) + 1) : month;
         function getvalue(name) {
             const url_string = window.location.href;
